@@ -25,6 +25,12 @@ public class DemonstrateDeadlock {
             }
         }
 
+        // the transferMoney method is called within the run method
+        // of each Transfer Thread.
+        // This method involves acquiring locks on both the
+        // from Account and to Account objects before performing the transfer.
+        // If multiple threads try to transfer money between the same
+        // accounts concurrently, it can result in a deadlock situation
         for (int i = 0; i < NUM_THREADS; i++) {
             new TransferThread().start();
         }
