@@ -1,8 +1,6 @@
 package ru.practice.monitor;
 
-import net.jcip.annotations.NotThreadSafe;
-
-@NotThreadSafe
+// @NotThreadSafe
 public class MutablePoint {
     public int x, y;
 

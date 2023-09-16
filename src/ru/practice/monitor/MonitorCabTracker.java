@@ -1,8 +1,5 @@
 package ru.practice.monitor;
 
-import net.jcip.annotations.GuardedBy;
-import net.jcip.annotations.ThreadSafe;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,9 +9,9 @@ import java.util.Map;
  * Полезна при создании классов с нуля или компоновки классов из непотокобезопасных объектов
  */
 
-@ThreadSafe
+// @ThreadSafe
 public class MonitorCabTracker {
-    @GuardedBy("this")
+    // @GuardedBy("this")
     private final Map<String, MutablePoint> locations;
 
     public MonitorCabTracker(Map<String, MutablePoint> locations) {
